@@ -24,3 +24,6 @@ npm run test
 ```
 npm run lint
 ```
+![主页](https://raw.github.com/wbzhou1992/repositpry/master/crm/ReadMeImages/home.jpg)
+
+![弹窗](https://raw.github.com/wbzhou1992/repositpry/master/crm/ReadMeImages/pop.jpg)
