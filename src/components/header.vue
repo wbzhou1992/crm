@@ -9,32 +9,29 @@
         </ul>
     </div>
 </template>
-<style scoped>
+<style lang="less" scoped>
     .header{
         height: 50px;
         line-height: 50px;
         background: #f3f5f7;
         border-bottom: 1px solid #eee;
-    }
-    .left{
-        float: left;
-        margin-left: 20px;
-    }
-    .right{
-        float: right;
-
-    }
-    ul{
-        width: 200px;
-    }
-    ul li{
-        padding: 0;
-        list-style: none;
-        float: left;
-        width: 50px;
-        line-height: 50px;
-    }
-    ul li i{
-        margin-right: 4px;
+        .left{
+            float: left;
+            margin-left: 20px;
+        }
+        .right{
+            float: right;
+            width: 200px;
+            li{
+                padding: 0;
+                list-style: none;
+                float: left;
+                width: 50px;
+                line-height: 50px;
+                 i{
+                    margin-right: 4px;
+                }
+            }
+        }
     }
 </style>

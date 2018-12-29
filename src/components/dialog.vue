@@ -1,22 +1,15 @@
 <template>
-   <div class="dialog">
-           
-        </div>
-         <div class="dialog-content">
-                <h1>修改客户信息</h1>
-                <div class="customer-cont">
-                    <label for="name"></label><input type="text" name="name"> 
-                </div>
-            </div>
-        </div>
+<div>
+    <div class="dialog">
+    </div>
+    <div class="dialog-content">
+           <h1>修改客户信息</h1>
+           <div class="customer-cont">
+               <label for="name"></label><input type="text" name="name"> 
+           </div>
+    </div>
+</div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
 <style scoped> 
  .dialog{
      position:fixed;
@@ -27,9 +20,7 @@ export default {
      z-index: 3;
      background-color: #000;
      opacity: .5;
-     
-     /* display: none; */
- }
+}
  .dialog-content{
      width:400px;
      height:900px;

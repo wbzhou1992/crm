@@ -1,13 +1,13 @@
 <template>
-<ul class="pagination"> 
+	<ul class="pagination"> 
 		<li v-if="cur==1" class="disabled"><span><i class="fa fa-angle-double-left"></i></span></li>
 		<li v-if="cur!=1"><a @click="btnClick(cur-1)"><i class="fa fa-angle-double-left"></i></a></li>
 		<li v-for="index in indexs" v-bind:class="{ 'active': cur == index}">
-		<span v-on:click="btnClick(index)">{{ index }}</span>
+			<span v-on:click="btnClick(index)">{{ index }}</span>
 		</li>
 		<li v-if="cur==all" class="disabled"><span><i class="fa fa-angle-double-right"></i></span></li>
 		<li v-if="cur!=all"><a @click="btnClick(cur+1)"><i class="fa fa-angle-double-right"></i></a></li>
-		</ul>
+	</ul>
 </template>
 <script>
 export default {
@@ -62,61 +62,67 @@ export default {
 		}
 }
 </script>
-<style scoped>
+<style lang="less">
 ul{
     margin: 0;
     padding:0;
 }
 .pagination{
   text-align: center;
+  	&>li{
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px;
+		a {
+			border: 1px solid rgba(0,0,0,.2);
+			border-radius: 4px;
+			border-bottom-color: rgba(0,0,0,.3);
+			display: inline-block;
+			text-shadow: 0 1px 0 #fff;
+			background: #f7f7f7;
+			color: #666;
+			text-align: center;
+			width: 32px;
+			line-height: 32px;
+			cursor: default;
+			&:hover{
+				:hover{
+					background: #fff;
+					color: #666;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	span{
+		border: 1px solid rgba(0,0,0,.2);
+		border-radius: 4px;
+		display: inline-block;
+		text-shadow: 0 1px 0 #fff;
+		color: #666;
+		text-align: center;
+		width: 32px;
+		line-height: 32px;
+		cursor: pointer;
+		&:hover{
+			background: #fff;
+		}
+	}
+	.active{
+		span{
+			background: #fff;
+			text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+			cursor: auto;
+			border-color:#2d8cf0;
+		}
+	}
+	.disabled{
+		 span{
+			text-shadow: 0 1px 0 #fff;
+			color: #999;
+			cursor: default;
+		}
+	}
 }
-.pagination>li{
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px;
-}
-.pagination span{
-  border: 1px solid rgba(0,0,0,.2);
-  border-radius: 4px;
-  display: inline-block;
-  text-shadow: 0 1px 0 #fff;
-  color: #666;
-  text-align: center;
-  width: 32px;
-  line-height: 32px;
-  cursor: pointer;
-  
-}
-.pagination span:hover{
-  background: #fff;
-}
-.pagination .active span{
-  background: #fff;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-  cursor: auto;
-  border-color:#2d8cf0;
-}
-.pagination li a {
-  border: 1px solid rgba(0,0,0,.2);
-  border-radius: 4px;
-  border-bottom-color: rgba(0,0,0,.3);
-  display: inline-block;
-  text-shadow: 0 1px 0 #fff;
-  background: #f7f7f7;
-  color: #666;
-  text-align: center;
-  width: 32px;
-  line-height: 32px;
-  cursor: default;
-}
-.pagination li a:hover{
-  background: #fff;
-  color: #666;
-  cursor: pointer;
-}
-.pagination .disabled span{
-  text-shadow: 0 1px 0 #fff;
-  color: #999;
-  cursor: default;
-}
+
 </style>
