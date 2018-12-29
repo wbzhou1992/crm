@@ -1,8 +1,8 @@
 <template>
    <div class="nav">
         <ul>
-            <li class="active"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>客户管理</li>
-            <li><i class="fa fa-cloud" aria-hidden="true"></i>客户拜访</li>
+            <li class="active"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><router-link :to="{ path: '/'}">客户管理</router-link></li>
+            <li><i class="fa fa-cloud" aria-hidden="true"></i><router-link :to="{ path: '/stock'}">股票信息</router-link></li>
         </ul>
    </div>
 </template>

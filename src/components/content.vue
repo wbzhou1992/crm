@@ -4,7 +4,7 @@
         <h1>客户管理</h1>
         <button type="button" class="new" @click="showCreateDialog"><span>新建</span><i class="fa fa-plus"></i></button>
         <div class="search">
-        <input type="text" placeholder="查询内容..." v-model="searchtext" @input="getCustomers">
+        <input type="text" placeholder="输入查询id..." v-model="searchtext" @input="getCustomers">
         <button type="submit" @click.prevent="search"><i class="fa fa-search"></i></button>
     </div>
     <div class="table">
