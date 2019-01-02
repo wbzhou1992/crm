@@ -1,6 +1,8 @@
 <template>
     <div class="header">
-        <span class="left">客户管理系统</span>
+        <span class="left">
+            <slot name="title"></slot>
+        </span>
         <ul class="right">
             <li><i class="fa fa-envelope" aria-hidden="true"></i><i class="fa fa-caret-down" aria-hidden="true"></i></li>
             <li><i class="fa fa-indent" aria-hidden="true"></i><i class="fa fa-caret-down" aria-hidden="true"></i></li>

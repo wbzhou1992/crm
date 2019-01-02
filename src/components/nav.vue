@@ -1,8 +1,8 @@
 <template>
    <div class="nav">
         <ul>
-            <li class="active"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><router-link :to="{ path: '/'}">客户管理</router-link></li>
-            <li><i class="fa fa-cloud" aria-hidden="true"></i><router-link :to="{ path: '/stock'}">股票信息</router-link></li>
+            <router-link tag="li" to="/home" active-class="active"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>客户管理</router-link>
+            <router-link tag="li" to="/stock" active-class="active"><i class="fa fa-cloud" aria-hidden="true"></i>股票信息</router-link>
         </ul>
    </div>
 </template>
@@ -14,6 +14,9 @@
     float: left;
     .active{
         background-color: #eee;
+         &:hover{
+            cursor: default;
+        }
     }
     li{
         line-height: 40px;
@@ -21,6 +24,9 @@
         text-align: center;
         i{
             margin-right: 10px;
+        }
+        &:hover{
+            cursor: pointer;
         }
     }
 }

@@ -4,9 +4,13 @@
 </style>
 <template>
  <div>
-   <cheader></cheader>
+   <cheader>
+    <template slot="title">
+        股票信息
+      </template>
+     </cheader>
    <cnav></cnav>
-   <ccontent></ccontent>
+   <ccontent>股票信息</ccontent>
  </div>
 </template>
 

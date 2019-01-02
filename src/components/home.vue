@@ -4,9 +4,13 @@
 </style>
 <template>
  <div>
-   <cheader></cheader>
+   <cheader>
+     <template slot="title">
+       客户管理系统
+     </template>
+   </cheader>
    <cnav></cnav>
-   <ccontent></ccontent>
+   <ccontent>客户管理</ccontent>
  </div>
 </template>
 

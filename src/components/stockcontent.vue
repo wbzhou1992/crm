@@ -1,7 +1,9 @@
 <template>
 <div class="body">
     <div class="content">
-        <h1>客户管理</h1>
+        <h1>
+            <slot></slot>
+        </h1>
         <div class="search">
         <input type="text" placeholder="输入查询id..." v-model="searchtext" @input="getStocks">
         <button type="submit"><i class="fa fa-search"></i></button>
@@ -76,7 +78,6 @@ export default {
     methods:{
         getStocks(){
             let url = 'http://localhost:8080/stock/all';
-            
             if (this.params) {  
                 let paramsArray = [];  
                 //拼接参数  

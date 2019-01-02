@@ -1,7 +1,9 @@
 <template>
 <div class="body">
     <div class="content">
-        <h1>客户管理</h1>
+        <h1>
+            <slot></slot>
+        </h1>
         <button type="button" class="new" @click="showCreateDialog"><span>新建</span><i class="fa fa-plus"></i></button>
         <div class="search">
         <input type="text" placeholder="输入查询id..." v-model="searchtext" @input="getCustomers">
