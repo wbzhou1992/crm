@@ -68,11 +68,12 @@ ul{
     padding:0;
 }
 .pagination{
-  text-align: center;
+  text-align: right;
   	&>li{
 		display: inline-block;
-		font-size: 16px;
-		margin: 4px;
+		font-size: 12px;
+		font-family: Arial;
+		margin-right: 8px ;
 		a {
 			border: 1px solid rgba(0,0,0,.2);
 			border-radius: 4px;
@@ -82,38 +83,45 @@ ul{
 			background: #f7f7f7;
 			color: #666;
 			text-align: center;
-			width: 32px;
-			line-height: 32px;
+			width: 28px;
+			line-height: 28px;
 			cursor: default;
 			&:hover{
-				:hover{
-					background: #fff;
-					color: #666;
-					cursor: pointer;
-				}
+				background: #fff;
+				color: #666;
+				cursor: pointer;
 			}
 		}
 	}
 	span{
-		border: 1px solid rgba(0,0,0,.2);
+		border: 1px solid #d9d9d9;
 		border-radius: 4px;
 		display: inline-block;
 		text-shadow: 0 1px 0 #fff;
 		color: #666;
 		text-align: center;
-		width: 32px;
-		line-height: 32px;
+		width: 28px;
+		line-height: 28px;
 		cursor: pointer;
+		transition:all .3s;
 		&:hover{
-			background: #fff;
+			border-color: #005ea5;;
+			color:#005ea5;
+			cursor: pointer;
 		}
 	}
 	.active{
 		span{
-			background: #fff;
+			background-color:#005ea5;
+			border-color:#005ea5;
+			color: #fff;
 			text-shadow: 0 -1px 0 rgba(0,0,0,.2);
 			cursor: auto;
 			border-color:#2d8cf0;
+			&:hover{
+				opacity: 0.8;
+				cursor: pointer;
+			}
 		}
 	}
 	.disabled{

@@ -1,8 +1,8 @@
 <template>
     <div class="header">
-        <span class="left">
-            <slot name="title"></slot>
-        </span>
+        <div class="left">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
         <ul class="right">
             <li><i class="fa fa-envelope" aria-hidden="true"></i><i class="fa fa-caret-down" aria-hidden="true"></i></li>
             <li><i class="fa fa-indent" aria-hidden="true"></i><i class="fa fa-caret-down" aria-hidden="true"></i></li>
@@ -15,11 +15,15 @@
     .header{
         height: 50px;
         line-height: 50px;
-        background: #f3f5f7;
-        border-bottom: 1px solid #eee;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.01);
         .left{
             float: left;
             margin-left: 20px;
+            font-size: 24px;
+            &:hover{
+                color:#005ea5;
+            }
         }
         .right{
             float: right;

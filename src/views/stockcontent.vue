@@ -47,17 +47,17 @@
                 </tr>
             </tbody>
         </table>
-        <vuenav v-if="isSearch" :cur="params.pageNum" :all="all" :callback="callback"></vuenav>
+        <!-- <vuenav v-if="isSearch" :cur="params.pageNum" :all="all" :callback="callback"></vuenav> -->
     </div>
     </div>
 
 </div>
 </template>
 <script>
-import vuenav from './vuenav.vue'
+// import vuenav from './vuenav.vue'
 export default {
     components:{
-        vuenav
+        // vuenav
     },
     data(){
         return {

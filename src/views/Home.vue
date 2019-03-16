@@ -1,17 +1,18 @@
+
 <template>
-  <div class="home">
-    <Home msg="Welcome to Your Vue.js App"/>
-  </div>
+ <div>
+   <cnav></cnav>
+   <ccontent></ccontent>
+ </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import Home from '@/components/home.vue'
-
-export default {
-  name: 'home',
-  components: {
-    Home
+import cnav from './nav.vue'
+import ccontent from './content.vue'
+  export default {
+    components:{
+      cnav,
+      ccontent
+    }
+        
   }
-}
 </script>

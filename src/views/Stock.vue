@@ -1,18 +1,29 @@
+
+<style>
+
+</style>
 <template>
-  <div class="home">
-    
-    <Stock msg="Welcome to Your Vue.js App"/>
-  </div>
+ <div>
+   <cheader>
+    <template slot="title">
+        股票信息
+      </template>
+     </cheader>
+   <cnav></cnav>
+   <ccontent>股票信息</ccontent>
+ </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Stock from '@/components/stock.vue'
-
-export default {
-  name: 'home',
-  components: {
-    Stock
+import cheader from './header.vue'
+import cnav from './nav.vue'
+import ccontent from './stockcontent.vue'
+  export default {
+    components:{
+      cheader,
+      cnav,
+      ccontent
+    }
+        
   }
-}
 </script>
