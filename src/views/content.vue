@@ -66,6 +66,8 @@ export default {
         cust_name: "",
         cust_source: "",
         cust_industry: "",
+        cust_address: "",
+        cust_linkman: "",
         cust_level: "",
         cust_phone: "",
         cust_mobile: ""
@@ -77,7 +79,7 @@ export default {
   },
   methods: {
     getCustomers() {
-      let url = "http://localhost:8080/customer/all";
+      let url = "http://localhost:8080/api/customer/all";
       if (this.params) {
         let paramsArray = [];
         //拼接参数
@@ -118,6 +120,8 @@ export default {
         cust_name: "",
         cust_source: "",
         cust_industry: "",
+        cust_address: "",
+        cust_linkman: "",
         cust_level: "",
         cust_phone: "",
         cust_mobile: ""
@@ -129,10 +133,12 @@ export default {
       data.append("cust_name", this.currentCustomer.cust_name);
       data.append("cust_source", this.currentCustomer.cust_source);
       data.append("cust_industry", this.currentCustomer.cust_industry);
+      data.append("cust_address", this.currentCustomer.cust_address);
+      data.append("cust_linkman", this.currentCustomer.cust_linkman);
       data.append("cust_level", this.currentCustomer.cust_level);
       data.append("cust_phone", this.currentCustomer.cust_phone);
       data.append("cust_mobile", this.currentCustomer.cust_mobile);
-      fetch("http://localhost:8080/customer/update", {
+      fetch("http://localhost:8080/api/customer/update", {
         method: "POST",
         mode: "cors",
         body: data
@@ -157,8 +163,10 @@ export default {
       data.append("cust_industry", this.currentCustomer.cust_industry);
       data.append("cust_level", this.currentCustomer.cust_level);
       data.append("cust_phone", this.currentCustomer.cust_phone);
+      data.append("cust_address", this.currentCustomer.cust_address);
+      data.append("cust_linkman", this.currentCustomer.cust_linkman);
       data.append("cust_mobile", this.currentCustomer.cust_mobile);
-      fetch("http://localhost:8080/customer/create", {
+      fetch("http://localhost:8080/api/customer/create", {
         method: "POST",
         mode: "cors",
         body: data
@@ -187,7 +195,7 @@ export default {
     deleteCustomer(id) {
       let data = new FormData();
       data.append("id", id);
-      fetch("http://localhost:8080/customer/delete", {
+      fetch("http://localhost:8080/api/customer/delete", {
         method: "POST",
         mode: "cors",
         body: data
@@ -208,7 +216,7 @@ export default {
     search() {
       let data = new FormData();
       data.append("id", this.searchtext);
-      fetch("http://localhost:8080/customer/detail", {
+      fetch("http://localhost:8080/api/customer/detail", {
         method: "POST",
         mode: "cors",
         body: data

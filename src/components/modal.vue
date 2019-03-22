@@ -81,6 +81,17 @@
             id="address"
           >
         </div>
+        <div>
+          <span>联系人</span>
+          <input
+            v-model="currentCustomer.cust_linkman"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder
+            type="text"
+            id="address"
+          >
+        </div>
       </div>
       <slot></slot>
     </div>
