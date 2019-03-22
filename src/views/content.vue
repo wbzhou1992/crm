@@ -78,7 +78,6 @@ export default {
   methods: {
     getCustomers() {
       let url = "http://localhost:8080/customer/all";
-
       if (this.params) {
         let paramsArray = [];
         //拼接参数
@@ -114,6 +113,15 @@ export default {
     },
     showCreateDialog() {
       this.isShow = true;
+      this.currentCustomer = {
+        cust_id: "",
+        cust_name: "",
+        cust_source: "",
+        cust_industry: "",
+        cust_level: "",
+        cust_phone: "",
+        cust_mobile: ""
+      };
     },
     changeCustomer() {
       let data = new FormData();

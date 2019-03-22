@@ -70,6 +70,17 @@
             id="mobile"
           >
         </div>
+        <div>
+          <span>地址</span>
+          <input
+            v-model="currentCustomer.cust_address"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder
+            type="text"
+            id="address"
+          >
+        </div>
       </div>
       <slot></slot>
     </div>

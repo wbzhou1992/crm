@@ -1,7 +1,7 @@
 
 <template>
  <div>
-   <cnav></cnav>
+   <cnav @gotoSub="gotoSub"></cnav>
    <ccontent></ccontent>
  </div>
 </template>
@@ -12,6 +12,11 @@ import ccontent from './content.vue'
     components:{
       cnav,
       ccontent
+    },
+    methods: {
+      gotoSub (name) {
+        console.log(name)
+      }
     }
         
   }

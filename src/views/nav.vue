@@ -13,8 +13,8 @@
               <i class="arrow" v-show="item.subItems&&item.subItems.length>0" :class="[item.isSubShow ? 'fa fa-angle-up':'fa fa-angle-down']"></i>
             </div>
             <ul v-show="item.isSubShow">
-              <li v-for="subItem in item.subItems">
-                <div class="oneMenuChild">
+              <li v-for="(subItem,index) in item.subItems" :key="index">
+                <div class="oneMenuChild" @click.prevent="gotoSub(item.subItems[index].name)">
                     <i class="icon" :class="item.iconClass" />
                     {{subItem.name}}
                 </div>
@@ -88,8 +88,10 @@
         }
     },
     methods:{
-      // 点击展开折叠菜单事件
-      showToggle:function(item,ind){
+      gotoSub (name) {
+        this.$emit('gotoSub',name)
+      },
+      showToggle (item,ind) {
         // this.menuList.forEach(i => {
         //   // 判断如果数据中的menuList[i]的show属性不等于当前数据的isSubShow属性那么menuList[i]等于false
         //   if (i.isSubShow !== this.menuList[ind].isSubShow) {
@@ -98,8 +100,7 @@
         // });
         item.isSubShow = !item.isSubShow;
         console.log(item.name)
-      },
- 
+      }
     }
   }
 </script>
